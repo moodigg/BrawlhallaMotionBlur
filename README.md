@@ -29,5 +29,11 @@ because that gives it more frames to blend.
 
 ## Notes
 
-- Brawlhalla has no anti-cheat today, and ReShade only changes what you see. Use it at your own risk.
+- My launch options helped a lot: with them I get a stable **800 fps** on a mid-range PC, which
+  gives the blur plenty of frames to blend. Set them in Steam: right-click Brawlhalla →
+  Properties → Launch Options.
+
+  ```
+  latencytest -unlockfps -dx9 -force64 -forceservice -high -64bit -framefix -framefixunbounded -novid -tickrate 128 -high +fps_max 0 +cl_showfps 0 +cl_interp 0 +cl_interp_ratio 1 +rate 128000 +cl_updaterate 128 +cl_cmdrate 128 +mat_queue_mo -triplebuffer
+  ```
 - Blur adds a few milliseconds of visual delay. Lower the blur length if you notice it.
